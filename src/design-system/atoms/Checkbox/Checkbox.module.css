@@ -1,0 +1,64 @@
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+/* 44px hit area around a 20px box */
+.box {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: 12px;
+  margin-inline-start: 0;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+  scroll-margin-top: var(--space-7);
+  scroll-margin-bottom: var(--sticky-bar-space);
+}
+
+.box:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 3px;
+}
+
+.box[aria-invalid='true'] {
+  outline: 2px solid var(--color-error);
+  outline-offset: 2px;
+}
+
+.box[aria-invalid='true']:focus-visible {
+  outline-color: var(--color-border-focus);
+}
+
+.label {
+  flex: 1;
+  min-width: 0;
+  min-height: var(--control-min-height);
+  display: flex;
+  align-items: center;
+  padding-block: var(--space-2);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.marker {
+  color: var(--color-error);
+  white-space: pre;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

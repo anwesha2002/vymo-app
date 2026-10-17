@@ -1,0 +1,50 @@
+/*
+ * Design tokens.
+ *
+ * Breakpoints: CSS custom properties cannot be used inside media queries, so
+ * components use the literal values 768px and 1024px. The source of truth is
+ * `src/design-system/tokens/breakpoints.ts` (BREAKPOINTS.mobile / .desktop).
+ */
+:root {
+  /* Color */
+  --color-primary: #2348c4;
+  --color-primary-hover: #1a389e;
+  --color-text: #1b1f2a;
+  --color-text-muted: #596175;
+  --color-border: #c4c9d6;
+  --color-border-focus: #2348c4;
+  --color-error: #b42318;
+  --color-error-bg: #fef3f2;
+  --color-surface: #ffffff;
+  --color-background: #f3f5f9;
+  --color-disabled: #e4e7ee;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* Typography */
+  --font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-size-sm: 14px;
+  --font-size-base: 16px; /* 16px on controls prevents iOS zoom on focus */
+  --font-size-lg: 20px;
+  --font-size-xl: 28px;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.25;
+  --line-height-base: 1.5;
+
+  /* Shape and focus */
+  --radius: 8px;
+  --focus-ring: 0 0 0 3px rgba(35, 72, 196, 0.35);
+  --focus-outline: 2px solid var(--color-border-focus);
+  --control-min-height: 44px;
+
+  /* Height reserved for the sticky action bar on small screens */
+  --sticky-bar-space: 96px;
+}
